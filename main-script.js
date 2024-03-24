@@ -11,7 +11,7 @@ const palindromeChecker = () => {
     } else {
         stringNormalizer();
         for (let i = 0; i < normalizedStringArray.length / 2; i++) {
-            if (normalizedStringArray[i] !== normalizedStringArray[length - 1 -i]) {
+            if (normalizedStringArray[i] !== normalizedStringArray[normalizedStringArray.length - 1 -i]) {
                 isPalindrome = false;
                 break;
             }
