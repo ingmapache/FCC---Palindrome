@@ -1,0 +1,116 @@
+:root {
+    --bgColor: #081C15;
+    --outsideTextColor: #D8F3DC;
+    --buttonBgColor: #52B788;
+    --hintBgColor: #40916C;
+}
+
+html {
+    background-color: var(--bgColor);
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    place-items: center;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: auto;
+    height: 500px;
+    width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: var(--outsideTextColor);
+    font-size: 2.4rem;
+    margin: 30px auto;
+}
+
+.palindromeDiv {
+    width: 500px;
+    min-height: 120px;
+    background-color: var(--outsideTextColor);
+    border-radius: 16px;
+    box-shadow: black 15px 15px 16px;
+}
+
+.instructionText {
+    font-size: 1.2rem;
+    
+}
+
+#inputDiv {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#text-input {
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
+}
+
+#check-btn {
+    font-size: 1.1rem;
+    border-radius: 11px;
+    padding: 7px 15px;
+    background-color: var(--buttonBgColor);
+    color: var(--outsideTextColor);
+    border: 0;
+}
+
+#check-btn:hover {
+    cursor: pointer;
+}
+
+#check-btn:active {
+    background-color: var(--bgColor);
+}
+
+#result {
+    width: 400px;
+    margin: auto;
+}
+
+.descriptionDiv {
+    width: 500px;
+    min-height: 120px;
+    background-color: var(--outsideTextColor);
+    border-radius: 16px;
+    margin-top: 25px;
+    display: flex;
+    background-color: var(--hintBgColor);
+    color: var(--outsideTextColor);
+    box-shadow: black 15px 15px 16px;
+}
+
+#hintText {
+    width: 450px;
+    margin: auto;
+    text-align: justify;
+    font-size: 1.4rem;
+}
+
+#marioFloor {
+    background-image: url(./assets/marioFloor.png);
+    background-repeat: repeat-x;
+    background-size: 90px;
+    background-position: bottom;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:-1px;
+    left: -1px;
+    z-index: -1;
+}
