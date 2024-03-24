@@ -3,16 +3,21 @@ const checkBtn = document.getElementById('check-btn');
 const results = document.getElementById('results');
 
 let normalizedStringArray;
-let reversedArray;
+let isPalindrome = true;
 
 const palindromeChecker = () => {
     if (textInput.value === "") {
         alert('Please input a value');
     } else {
         stringNormalizer();
-        arrayReverser();
+        for (let i = 0; i < normalizedStringArray.length / 2; i++) {
+            if (normalizedStringArray[i] !== normalizedStringArray[length - 1 -i]) {
+                isPalindrome = false;
+                break;
+            }
+        }
         console.log(normalizedStringArray);
-        console.log(reversedArray);
+        console.log(isPalindrome);
     }
 
 
@@ -20,10 +25,6 @@ const palindromeChecker = () => {
 
 const stringNormalizer = () => {
     normalizedStringArray = textInput.value.toString().toLowerCase().replace(/\W/g, '').split('');
-}
-
-const arrayReverser = () => {
-    reversedArray = [...normalizedStringArray].reverse();
 }
 
 checkBtn.addEventListener('click', palindromeChecker);
